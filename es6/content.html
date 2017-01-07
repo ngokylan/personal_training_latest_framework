@@ -138,9 +138,7 @@
 				filename = "classes";
 			}
 
-    		$.get("sections/"+ filename + "/main.js", function(data){
-    			$("body").html(data);	
-    		});
+    		import ("sections/"+ filename + "/main.js");
     		$.get("sections/"+ filename + "/README.md", function(data){
     			$("#main_content").html(data);	
     		});
