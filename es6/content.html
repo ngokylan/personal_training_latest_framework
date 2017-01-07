@@ -140,7 +140,7 @@
 
     		$.getScript("sections/"+ filename + "/main.js", function() {
 			    //script is loaded and executed put your dependent JS here
-			});
+			}); 
     		$.get("sections/"+ filename + "/README.md", function(data){
     			$("#main_content").html(data);	
     		});
