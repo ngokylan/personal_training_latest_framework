@@ -136,11 +136,18 @@
 				filename = "const_let";
 			}else if(id == 14){
 				filename = "classes";
+			}else if(id == 15){
+				filename = "generators";
+			}else if(id == 16){
+				filename = "promises_fetch";
 			}
 
-    		$.getScript("sections/"+ filename + "/main.js", function() {
-			    //script is loaded and executed put your dependent JS here
-			}); 
+    	
+    		var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = "sections/"+ filename + "/main.js";
+document.head.appendChild(script);
+
     		$.get("sections/"+ filename + "/README.md", function(data){
     			$("#main_content").html(data);	
     		});

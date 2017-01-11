@@ -31,11 +31,11 @@ const toyota = new Toyota({color: "red", title: "Daily Driver"});
 '---';
 toyota;
 toyota.drive();
-toyota.horn();
+toyota.honk();
 
 
 //Example 2
-class Car {
+class Car2 {
 	constructor({title}){
 		this.title = title;
 	}
@@ -49,7 +49,7 @@ class Car {
 // car;
 // car.drive();
 //ES6 will use extends Car next to Toyota
-class Toyota extends Car {
+class Honda extends Car2 {
 	constructor(options){
 		//important here, assign title from car to toyota
 		super(options);//Car.constructor()
@@ -62,32 +62,32 @@ class Toyota extends Car {
 	}
 }
 
-const toyota = new Toyota({color: "red", title: "Daily Driver"});
+const honda = new Honda({color: "red", title: "Daily Driver"});
 '---';
-toyota.honk();
-toyota.drive();
-toyota;
+honda.honk();
+honda.drive();
+honda;
 
 //Example 3
-React.createClass({
-	doSomething(){
+// React.createClass({
+// 	doSomething(){
 
-	},
+// 	},
 
-	doSomethingElse(){
+// 	doSomethingElse(){
 
-	}
-});
+// 	}
+// });
 
-class MyComponent extends Component{
-	doSomething(){
+// class MyComponent extends Component{
+// 	doSomething(){
 
-	}
+// 	}
 
-	doSomethingElse(){
+// 	doSomethingElse(){
 
-	}
-}
+// 	}
+// }
 
 ////////////////////////////
 //Exercise 1
