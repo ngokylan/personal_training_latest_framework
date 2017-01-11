@@ -24,16 +24,13 @@
 					 
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 						 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-					</button> <a class="navbar-brand" href="#">Dennis Minh ES6</a>
+					</button> <a class="navbar-brand" href="#">Dennis Minh</a>
 				</div>
 				
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li class="active">
 							<a href="#">Home</a>
-						</li>
-						<li>
-							<a href="exercise/index.html">Exercise</a>
 						</li>
 						<li class="dropdown">
 							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorial<strong class="caret"></strong></a>
@@ -92,68 +89,9 @@
 				</div>
 				
 			</nav>
-			<div class="jumbotron">
-				<h2>
-					Hello!
-				</h2>
-				<p>
-					This is my website portfolio that shows my latest personal training and projects.
-				</p>
-			</div>
 			
 			<div class="row">
-				<div class="col-md-12">
-					<div class="list-group">
-						 <a href="#" class="list-group-item active">Javascrtip ES6 Tutorial List</a>
-						<div class="list-group-item">
-							<a href="content.html?id=1">1/ ForEach Helper</a>
-						</div>
-						<div class="list-group-item">
-							<a href="content.html?id=2">2/ Map Helper</a>
-						</div>
-						<div class="list-group-item">
-							<a href="content.html?id=3">3/ Filter Helper</a>
-						</div>
-						<div class="list-group-item">
-							<a href="content.html?id=4">4/ Find Helper</a>
-						</div>
-						<div class="list-group-item">
-							<a href="content.html?id=5">5/ Reduce Helper</a>
-						</div>
-						<div class="list-group-item">
-							<a href="content.html?id=6">6/ Every Helper</a>
-						</div>
-						<div class="list-group-item">
-							<a href="content.html?id=7">7/ Template String</a>
-						</div>
-						<div class="list-group-item">
-							<a href="content.html?id=8">8/ Rest Spread</a>
-						</div>
-						<div class="list-group-item">
-							<a href="content.html?id=9">9/ Fat Arrow Function</a>
-						</div>
-						<div class="list-group-item">
-							<a href="content.html?id=10">10/ Enhance Object Literals</a>
-						</div>
-						<div class="list-group-item">
-							<a href="content.html?id=11">11/ Destructuring</a>
-						</div>
-						<div class="list-group-item">
-							<a href="content.html?id=12">12/ Default Function Arguments</a>
-						</div>
-						<div class="list-group-item">
-							<a href="content.html?id=13">13/ Const Let</a>
-						</div>
-						<div class="list-group-item">
-							<a href="content.html?id=14">14/ Classes</a>
-						</div>
-						<div class="list-group-item">
-							<a href="content.html?id=15">15/ ForEach</a>
-						</div>
-
-						
-						<a class="list-group-item active"><span class="badge">14</span>Help</a>
-					</div>
+				<div id="main_content" class="col-md-12">
 					
 				</div>
 			</div>
@@ -164,5 +102,57 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script>
+    	$(document).ready(function(){
+    		var parameters = location.href.split("?");
+			var id = parameters[1].replace('id=', '');
+			id = parseInt(id);
+			var filename = "";
+			if(id == 1){
+				filename = "foreach_helper";
+			}else if(id == 2){
+				filename = "map_helper";
+			}else if(id == 3){
+				filename = "filter_helper";
+			}else if(id == 4){
+				filename = "find_helper";
+			}else if(id == 5){
+				filename = "reduce_helper";
+			}else if(id == 6){
+				filename = "every_helper";
+			}else if(id == 7){
+				filename = "template_string";
+			}else if(id == 8){
+				filename = "rest_spread";
+			}else if(id == 9){
+				filename = "fat_arrow_function";
+			}else if(id == 10){
+				filename = "enhance_object_literals";
+			}else if(id == 11){
+				filename = "destructuring";
+			}else if(id == 12){
+				filename = "default_function_arguments";
+			}else if(id == 13){
+				filename = "const_let";
+			}else if(id == 14){
+				filename = "classes";
+			}else if(id == 15){
+				filename = "generators";
+			}else if(id == 16){
+				filename = "promises_fetch";
+			}
+
+    	
+    		var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = "sections/"+ filename + "/main.js";
+document.head.appendChild(script);
+
+    		$.get("sections/"+ filename + "/README.md", function(data){
+    			$("#main_content").html(data);	
+    		});
+    		
+    	});
+    </script>
   </body>
 </html>
