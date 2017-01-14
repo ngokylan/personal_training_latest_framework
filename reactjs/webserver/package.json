@@ -1,20 +1,16 @@
 {
   "name": "webserver",
   "version": "1.0.0",
-  "description": "Simple ReactJS Webserver application",
+  "description": "Simple Web Server",
   "main": "server.js",
   "dependencies": {
     "body-parser": "*",
-    "express": "*"
+    "express":"*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "repository" : { 
-   "type" : "git",
-   "url" : "http://github.com/npm/npm.git"
- },
-  "author": "Dennis Minh",
+  "author": "Brad Traversy",
   "license": "ISC"
 }
