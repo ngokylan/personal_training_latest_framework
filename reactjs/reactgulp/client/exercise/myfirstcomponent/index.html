@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Dennis ReactJS - Hello World</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/style.css" rel="stylesheet">
+
+     <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    
+
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+  <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.25/browser.js"></script>
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+           
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+             <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+          </button> <a class="navbar-brand" href="#">Dennis Minh ReactJS</a>
+        </div>
+        
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="../../index.html">Home</a>
+            </li>
+            <li  class="active" class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorial<strong class="caret"></strong></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="active">Hello World</a>
+                </li>
+                <li>
+                  <a href="../regform/index.html">Registration Form</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        
+          <!-- <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">Action</a>
+                </li>
+                <li>
+                  <a href="#">Another action</a>
+                </li>
+                <li>
+                  <a href="#">Something else here</a>
+                </li>
+                <li class="divider">
+                </li>
+                <li>
+                  <a href="#">Separated link</a>
+                </li>
+              </ul>
+            </li>
+          </ul> -->
+        </div>
+        
+      </nav>
+      
+      <div class="row">
+        <div id="main_content" class="col-md-12">
+          <div class="container">
+            <div class="row">
+            <form class="form-horizontal">
+            <fieldset>
+
+            <!-- Description -->
+            <div class="form-group well">
+                <h3>Description: Hello World App using ReactJS + JSX</h3>
+            </div>
+
+            <div id="HelloMessage"></div>
+            <div id="HelloMessage2"></div>
+
+            <script type="text/babel">
+              class HelloMessage extends React.Component {
+            render() {
+              return <div>Hello {this.props.name}</div>;
+            }
+          }
+
+          ReactDOM.render(<HelloMessage name="Jane"> </HelloMessage>, document.getElementById("HelloMessage"));
+
+
+          var NewComponent = React.createClass({
+            sayMessage: function(){
+                alert(this.props.children);
+            },
+            render: function() {
+              return (
+                <div>
+                  {/* Hello world */}
+                  <div className="awesome" style={{border: '1px solid red'}}>
+                    <label htmlFor="name">Enter {this.props.word} name: </label>
+                    <input type="text" id="name" />
+                  </div>
+                  <p><a href="#" onMouseOver={this.sayMessage}>Click For Message</a></p>
+                </div>
+              );
+            }
+          });
+
+          ReactDOM.render(<NewComponent word="Everyone">What are you up to?</NewComponent>, document.getElementById("HelloMessage2"));
+         
+          </script>
+            </fieldset>
+            </form>
+
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    
+  </body>
+</html>

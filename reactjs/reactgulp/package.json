@@ -1,0 +1,20 @@
+{
+  "name": "reactserver",
+  "version": "1.0.0",
+  "description": "ReactJS with Gulp",
+  "main": "server.js",
+  "dependencies": {
+    "gulp":"*",
+    "gulp-browserify":"*",
+    "react":"*",
+    "react-dom":"*",
+    "babel":"*",
+    "reactify":"*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Dennis Minh",
+  "license": "ISC"
+}

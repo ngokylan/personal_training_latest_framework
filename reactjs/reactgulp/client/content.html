@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Dennis ES6 Tutorial</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					 
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+					</button> <a class="navbar-brand" href="#">Dennis Minh</a>
+				</div>
+				
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="#">Home</a>
+						</li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorial<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Action</a>
+								</li>
+								<li>
+									<a href="#">Another action</a>
+								</li>
+								<li>
+									<a href="#">Something else here</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#">Separated link</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#">One more separated link</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control">
+						</div> 
+						<button type="submit" class="btn btn-default">
+							Search
+						</button>
+					</form>
+					<!-- <ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Action</a>
+								</li>
+								<li>
+									<a href="#">Another action</a>
+								</li>
+								<li>
+									<a href="#">Something else here</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#">Separated link</a>
+								</li>
+							</ul>
+						</li>
+					</ul> -->
+				</div>
+				
+			</nav>
+			
+			<div class="row">
+				<div id="main_content" class="col-md-12">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+    	$(document).ready(function(){
+    		var parameters = location.href.split("?");
+			var id = parameters[1].replace('id=', '');
+			id = parseInt(id);
+			var filename = "";
+			if(id == 1){
+				filename = "foreach_helper";
+			}else if(id == 2){
+				filename = "map_helper";
+			}else if(id == 3){
+				filename = "filter_helper";
+			}else if(id == 4){
+				filename = "find_helper";
+			}else if(id == 5){
+				filename = "reduce_helper";
+			}else if(id == 6){
+				filename = "every_helper";
+			}else if(id == 7){
+				filename = "template_string";
+			}else if(id == 8){
+				filename = "rest_spread";
+			}else if(id == 9){
+				filename = "fat_arrow_function";
+			}else if(id == 10){
+				filename = "enhance_object_literals";
+			}else if(id == 11){
+				filename = "destructuring";
+			}else if(id == 12){
+				filename = "default_function_arguments";
+			}else if(id == 13){
+				filename = "const_let";
+			}else if(id == 14){
+				filename = "classes";
+			}else if(id == 15){
+				filename = "generators";
+			}else if(id == 16){
+				filename = "promises_fetch";
+			}
+
+    	
+    		var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = "sections/"+ filename + "/main.js";
+document.head.appendChild(script);
+
+    		$.get("sections/"+ filename + "/README.md", function(data){
+    			$("#main_content").html(data);	
+    		});
+    		
+    	});
+    </script>
+  </body>
+</html>
