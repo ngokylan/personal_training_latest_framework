@@ -1,0 +1,30 @@
+{
+  "name": "webpack-karma-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tests": "karma start karma.single.config.js",
+    "test": "npm run tests",
+    "test:watch": "npm run tests:watch",
+    "tests:watch": "karma start karma.watch.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "*",
+    "jsx-loader": "*",
+    "karma": "*",
+    "karma-chrome-launcher": "*",
+    "karma-cli": "*",
+    "karma-mocha": "*",
+    "karma-sourcemap-loader": "*",
+    "karma-webpack": "*",
+    "mocha": "*",
+    "sinon": "*",
+    "webpack": "*"
+  },
+  "dependencies": {
+    "react": "*"
+  }
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Dennis ES6 Tutorial</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					 
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+					</button> <a class="navbar-brand" href="#">Dennis Minh</a>
+				</div>
+				
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="../index.html">Home</a>
+						</li>
+						<li class="dropdown active">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="exercise/index.html">Exercise
+							<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="index.html">Calc Date Different</a>
+								</li>
+								<li class="active">
+									<a href="#">Robot Movement</a>
+								</li>
+								
+							</ul>
+						</li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorial<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Action</a>
+								</li>
+								<li>
+									<a href="#">Another action</a>
+								</li>
+								<li>
+									<a href="#">Something else here</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#">Separated link</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#">One more separated link</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control">
+						</div> 
+						<button type="submit" class="btn btn-default">
+							Search
+						</button>
+					</form>
+					<!-- <ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Action</a>
+								</li>
+								<li>
+									<a href="#">Another action</a>
+								</li>
+								<li>
+									<a href="#">Something else here</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#">Separated link</a>
+								</li>
+							</ul>
+						</li>
+					</ul> -->
+				</div>
+				
+			</nav>
+			
+			<div class="row">
+				<div id="main_content" class="col-md-12">
+					<div class="container">
+						<div class="row">
+						<form class="form-horizontal">
+						<fieldset>
+
+						<!-- Form Name -->
+						<legend>Calculate Robot Movement using Javscript ES6</legend>
+
+						<!-- Description -->
+						<div class="form-group well">
+						    <h3>Description:</h3>
+
+							
+							<p>The application is a simulation of a toy robot moving on a squaretabletop, of dimensions 5 units x 5 units.There are no other obstructions on the table surface.<br/>
+							The robot is free to roam around the surface of the table, but must beprevented from falling to destruction.  <br/>
+							Any movement that would resultin the robot falling from the table must be prevented, however furthervalid movement commands must still be allowed.<br/>
+							Create an application that can read in commands of the following form -    PLACE X,Y,F    MOVE    LEFT    RIGHT    REPORT Where PLACE will put the toy robot on the table in position X,Y and facing NORTH, SOUTH, EAST or WEST.  <br/>
+							The origin (0,0) can be considered tobe the SOUTH WEST most corner.It is required that the first command to the robot is a PLACE command,after that, any sequence of commands may be issued, in any order, includinganother PLACE command.  <br/>
+							The application should discard all commands inthe sequence until a valid PLACE command has been executed. Where MOVE will move the toy robot one unit forward in the directionit is currently facing.Where LEFT and RIGHT will rotate the robot 90 degrees in the specifieddirection without changing the position of the robot.Where REPORT will announce the X,Y and F of the robot.  <br/>
+							This can being any form, but standard output is sufficient.A robot that is not on the table can choose the ignore the MOVE, LEFT,RIGHT and REPORT commands.<br/>
+							Input can be from a file, or from standard input, as the developer chooses.Provide test data to exercise the application.<br/>
+							<b>Constraints:</b><br/>
+							- The toy robot must not fall off the table during movement.  <br/>
+							- This alsoincludes the initial placement of the toy robot.  <br/>
+							- Any move that would causethe robot to fall must be ignored.<br/>
+							Example Input and Output:<br>
+								+ a)----------------PLACE 0,0,NORTH MOVE ;REPORT => Output: 0,1,NORTH<br/>
+								+ b)----------------PLACE 0,0,NORTH LEFT ;REPORT =>
+							Output: 0,0,WEST<br/>
+								+ c)----------------PLACE 1,2,EAST MOVE MOVE LEFT MOVE ;REPORT => Output: 3,3,NORTH<br/><br/>
+
+							<b>Deliverables</b>: The source files, the test data and any test code.It is not required to provide any graphical output showing the movementof the toy robot.
+							</p>
+						</div>
+
+						<!-- Text input date1-->
+						<div class="form-group">
+						  <label class="col-md-4 control-label" for="textinput">Instructions</label>  
+						  <div class="col-md-4">
+						  <input id="txtInstructions" name="txtDate1" type="text" placeholder="0 0 NORTH RIGHT MOVE" value="0 0 NORTH RIGHT MOVE" class="form-control input-md">
+						  
+						  </div>
+						</div>
+
+
+						<!-- Display Result-->
+						<div class="form-group">
+						  <label class="col-md-4 control-label" for="passwordinput">Result</label>
+						  <div class="col-md-4">
+						    <span id="lblResult" class="label label-danger">
+						    </span>
+						  </div>
+						</div>
+
+					
+						<!-- Button (Double) -->
+						<div class="form-group">
+						  <label class="col-md-4 control-label" for="button1id"></label>
+						  <div class="col-md-8">
+						    <button id="btnCalculate" name="btnCalculate" class="btn btn-primary" type="button">Calculate</button>
+						    <button id="btnRest" name="button2id" class="btn btn-danger" type="reset">Reset</button>
+						  </div>
+						</div>
+
+						</fieldset>
+						</form>
+
+							</div>
+						</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/scripts.js"></script>
+    <script src="robot_app.js"></script>
+   
+  </body>
+</html>
