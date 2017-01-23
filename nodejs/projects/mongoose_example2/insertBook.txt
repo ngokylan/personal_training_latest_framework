@@ -1,0 +1,31 @@
+// mongo db command list
+https://docs.mongodb.com/manual/reference/mongo-shell/
+
+
+use book
+switched to db book
+> db.createCollection('books');
+{ "ok" : 1 }
+> show collections
+books
+> db.books.find()
+> db.books.find().pretty() // show data in pretty form
+
+
+db.books.insert({
+  title: 'Refactoring the DOM',
+  author: 'Joe Blow',
+  category: 'Technology'
+})
+
+db.books.insert({
+  title: 'Learn Colloquial Speech',
+  author: 'Susie Q',
+  category: 'Humanities'
+})
+
+db.books.insert({
+  title: 'Study of the Brain',
+  author: 'Matt G',
+  category: 'Health'
+})
