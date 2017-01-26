@@ -1,6 +1,4 @@
 
-Crimson Full-Stack Technical Test 
-Front-End
 You are provided with a simple webpage design that you should try to reproduce as a functional webpage, view-able on a browser. You can use any UI frameworks, css styles, or anything you want to get the job done. The fastest and most simple way is pure html and css styling. The goal is to get as close to the design requirements as possible and we are mainly judging the visual aspects of the work.
 
 The design: https://drive.google.com/file/d/0BxPmzD9OMlNUaWJwVGk2d2hGX0E/view
