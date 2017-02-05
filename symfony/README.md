@@ -8,7 +8,7 @@
 
 ##Config Symfony3 database connection settings:
 
-# app/config.yml
-# app/parameters.yml
+### app/config.yml
+### app/parameters.yml
 
 MIT License
