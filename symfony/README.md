@@ -6,4 +6,9 @@
 
 # http://localhost/todolist/web/app_dev.php/todo
 
+##Config Symfony3 database connection settings:
+
+# app/config.yml
+# app/parameters.yml
+
 MIT License
