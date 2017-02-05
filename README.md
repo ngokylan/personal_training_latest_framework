@@ -1,11 +1,7 @@
 #Personal training tutorial
 
-##The list of included frameworks:
-	1. Javascript ES6
-	2. ReactJS
-	3. ReactJs with Redux
-	4. Vue JS 2
-	5. PHP - Laravel
+##Command generate Bundle: 
+php bin/console generate:bundle --namespace=Todo/TodoBundle --format=yml --no-interaction
 
-##Tutorial Demo link: https://ngokylan.github.io/personal_training_latest_framework/es6/
+
 MIT License

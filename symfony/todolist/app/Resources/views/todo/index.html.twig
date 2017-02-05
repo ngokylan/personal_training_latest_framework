@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+    <div class="row col-md-12 custyle">
+    <h2 class="page-header">Latest Todo List</h2>
+    <table class="table table-striped custab">
+    <thead>
+    <a href="#" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new categories</a>
+        <tr>
+            <th>ID</th>
+            <th>Todo</th>
+            <th>Due Date</th>
+            <th class="text-center">Action</th>
+        </tr>
+    </thead>
+    {% for todo in todos%}
+            <tr>
+                <td>{{todo.id}}</td>
+                <td>{{todo.name}}</td>
+                <td>{{todo.dueDate|date('j F, Y, g:i a')}}</td>
+                <td class="text-center"><a class='btn btn-info btn-xs' href="details/{{todo.id}}"><span class="glyphicon glyphicon-info"></span> Details</a> <a class='btn btn-info btn-xs' href="edit/{{todo.id}}"><span class="glyphicon glyphicon-edit"></span> Edit</a> <a href="delete/{{todo.id}}" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+            </tr>
+    {% endfor %}
+    </table>
+    </div>
+</div>
+{% endblock %}
