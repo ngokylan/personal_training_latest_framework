@@ -1,0 +1,26 @@
+
+//generate package.json for node project
+npm init
+
+//command to install webpack plugins
+npm install --save-dev webpack@2.2.0-rc.0
+
+//command to install babel-loader, babel-core, and babel-preset-env to convert current ES6 to older ES5 version
+npm install --save-dev babel-loader babel-core babel-preset-env
+
+
+//command to install css loader file
+npm install --save-dev style-loader css-loader
+
+//command to install css plugin loader to generate seperate css files rather than within bundle.js file
+npm install --save-dev extract-text-webpack-plugin@2.0.0-beta.4
+
+//image-webpack-loader plugin-> check if the image is small or large
+//url-loader will decide 
+//- will include the image in bundle.js as a raw data if its small
+//- include the raw image in the output directory
+//* result: performance
+npm install --save-dev image-webpack-loader url-loader
+
+//command to run build webpack source code to generate output source in "build" folder
+npm run build

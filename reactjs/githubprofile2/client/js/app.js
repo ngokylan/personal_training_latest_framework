@@ -179,3 +179,41 @@ var SearchForm = React.createClass({
 
 
 ReactDOM.render(<Profile />, document.getElementById('github-profiles'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var Row2 = React.createClass({
+
+  render: function(){
+    return
+      (
+        this.props.items.reduce(function(prev, obj){
+          if(obj.passItem.cagetoryId == obj.passComment.setCategory){
+            return <ChildRow name={prev.name}/>;
+          }
+        }, {passItem: item, passComment: this.eachComment, return: "");
+      )
+    }
+});
+
+var ChildRow = React.createClass({
+
+  render: function(){
+    return (
+				<button onClick={this.select1} type="button" className="btn btn-primary btn-lg-size">
+					{this.props.name}
+				</button>
+			)
+    }
+});
